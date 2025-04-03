@@ -11,7 +11,8 @@ import { Errors } from "./ServiceMessages";
 
 export const fetchGeolocationData = async (): Promise<GeolocationRecord[]> => {
   try {
-    const csvFilePath = "/assets/result.csv"; // Path to your CSV file in assets folder
+    const csvFilePath = "/result.csv"; // Path to your CSV file in assets folder
+    console.log( csvFilePath )
     return await dataParse(csvFilePath);
   } catch ( e ) {
     if (process.env.NODE_ENV === 'development') {

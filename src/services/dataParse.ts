@@ -14,9 +14,12 @@ export const dataParse = async (csvFilePath: string): Promise<GeolocationRecord[
   const csvText = await response.text();
   //const domPurify = DOMPurify.default
 
+  console.log( "Csv is: ", csvText )
+
   const rows = csvText.split("\n").slice(1); // Skip first line - it is just a header
 
   return rows.map((row) => {
+    console.log( "Getting csv: ", row )
     const [pid, name, city, region, postal_code, tenant_type, longitude, latitude] = row.split(",");
 
     return {

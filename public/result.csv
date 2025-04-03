@@ -1,0 +1,10 @@
+pid,name,city,region,postal_code,tenant_type,longitude,latitude
+fd96f868-0360-4a7a-b582-51e09f84e8e8,Harbor Freight Tools,Albuquerque,NM,87105,Furniture & Home,-106.68774,35.084217
+6ac00d23-238a-4549-b882-0baa4ac54ef4,Phillips 66,St. Joseph,MO,64506,Convenience & Gas Stations,-94.814156,39.80714
+2de1c0f1-0610-4677-b1b7-e870ec809225,Big Sandy Superstore,Cape Girardeau,MO,63703,Furniture & Home,-89.51892,37.302505
+fec7942c-475c-4dc1-900d-385903d2b9d8,United States Postal Service (USPS),Middleburg,FL,32068,Services,-81.86285,30.073263
+da2b0a4d-9125-4f6d-8385-0fdc75c37db8,Shell Oil,Addison,TX,75001,Convenience & Gas Stations,-96.855385,32.93971
+826a7991-f7f1-4bd3-abc2-d6b07b0a0aa7,Skippers,St. Helens,OR,97051,Restaurants & Bars,-122.82499,45.85591
+5f8486e9-55d7-483e-8374-25f64b6f1ca0,Jiffy Lube,Denver,CO,80249,Automotive,-104.77259,39.779133
+ebc44029-829c-48cc-a8f0-c141f8263ce2,It's Just Wings,Jacksonville,FL,32258,Quick Serve Restaurants,-81.54748,30.142902
+ebd49b99-151b-47d0-b036-79dcff36bd92,Starbucks,Voorhees,NJ,08043,Quick Serve Restaurants,-74.92509,39.835083
