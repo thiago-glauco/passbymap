@@ -35,3 +35,12 @@
 //     }
 //   }
 // }
+
+Cypress.Commands.add('scrollVirtuosoTo', (yPosition: number) => {
+    cy.get('[data-testid="virtuoso-scroller"]')
+      .then(($el) => {
+        const scroller = $el[0];
+        scroller.scrollTop = yPosition;
+        scroller.dispatchEvent(new Event('scroll', { bubbles: true }));
+      });
+  });

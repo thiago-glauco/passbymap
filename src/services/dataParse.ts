@@ -20,15 +20,25 @@ export const dataParse = async (csvFilePath: string): Promise<GeolocationRecord[
 
   return rows.map((row) => {
     console.log( "Getting csv: ", row )
-    const [pid, name, city, region, postal_code, tenant_type, longitude, latitude] = row.split(",");
 
+    function normalizeRow( row: string ): string[] {
+      let normalizedRow = ''
+      if ( row.match('"') ) {
+        const partialRow = row.split( /,"|",/ );
+        return [...partialRow[0].split(','), partialRow[1], ...partialRow[2].split(',')]
+      }
+      return row.split(",");
+    }
+    
+    const [pid, name, city, region, postal_code, tenant_type, longitude, latitude] = normalizeRow( row )
+    
     return {
-      pid: (DOMPurify as any).default.sanitize(pid.trim()),
-      name:(DOMPurify as any).default.sanitize(name.trim()),
-      city: (DOMPurify as any).default.sanitize(city.trim()),
-      region: (DOMPurify as any).default.sanitize(region.trim()),
-      postal_code: (DOMPurify as any).default.sanitize(postal_code.trim()),
-      tenant_type: (DOMPurify as any).default.sanitize(tenant_type.trim()),
+      pid: (DOMPurify as any).default.sanitize(pid),
+      name:(DOMPurify as any).default.sanitize(name),
+      city: (DOMPurify as any).default.sanitize(city),
+      region: (DOMPurify as any).default.sanitize(region),
+      postal_code: (DOMPurify as any).default.sanitize(postal_code),
+      tenant_type: (DOMPurify as any).default.sanitize(tenant_type),
       longitude: parseFloat(longitude),
       latitude: parseFloat(latitude),
     } as GeolocationRecord;

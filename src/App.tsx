@@ -1,19 +1,27 @@
-import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import SillyTable from './components/SiLlyTable/SillyTable';
+import { useGeospatialData } from './hooks/useGeolocationData';
+import VirtualizedTenantsTable from './components/TenantsTable/VirtualizedTenantsTable'
+
 
 const queryClient = new QueryClient();
 
+const TableWrapper = ( ) => {
+  const { data, isLoading, error } = useGeospatialData();
+  if( isLoading ) return <div>Loading</div>
+  if( error ) return <div>Error loading data</div>
+  return (
+
+      <VirtualizedTenantsTable tenantsData={data ?? []}/>
+
+    )
+}
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-     <QueryClientProvider client={queryClient}>
-      <SillyTable />
+      <QueryClientProvider client={queryClient}>
+        <TableWrapper/>
       </QueryClientProvider>
     </>
   )
