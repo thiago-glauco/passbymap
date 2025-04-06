@@ -14,6 +14,8 @@
     "test:e2e:playwright": "playwright test"
   },
   "dependencies": {
+    "@deck.gl/layers": "^9.1.8",
+    "@deck.gl/react": "^9.1.8",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@fontsource/roboto": "^5.2.5",
@@ -23,10 +25,13 @@
     "@mui/styled-engine": "^7.0.1",
     "@mui/styled-engine-sc": "^7.0.1",
     "@tanstack/react-query": "^5.71.5",
+    "deck.gl": "^9.1.8",
     "dompurify": "^3.2.4",
+    "mapbox-gl": "^3.11.0",
     "node": "^23.11.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-map-gl": "^7.0.17",
     "react-virtuoso": "^4.12.6"
   },
   "devDependencies": {
@@ -63,5 +68,12 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js"
+    },
+    "./maplibre": "./dist/esm/maplibre.js",
+    "./mapbox": "./dist/esm/mapbox.js"
   }
 }

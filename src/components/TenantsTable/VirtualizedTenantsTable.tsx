@@ -8,7 +8,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { TableVirtuoso, TableComponents } from 'react-virtuoso';
 import { GeolocationRecord } from '../../types/GeolocationRecord';
-import VirtualizedTenantsTables from './VirtualizedTenantsTables_';
 
 interface TenantTableColumns {
   dataKey: keyof GeolocationRecord;

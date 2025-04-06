@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './App.css'
 import { useGeospatialData } from './hooks/useGeolocationData';
 import VirtualizedTenantsTable from './components/TenantsTable/VirtualizedTenantsTable'
-
+import MapView from './components/MapComponent/MapView'
 
 const queryClient = new QueryClient();
 
@@ -16,13 +16,21 @@ const TableWrapper = ( ) => {
 
     )
 }
+
+const MapWrapper = ( ) => {
+  const { data, isLoading, error } = useGeospatialData();
+  return(
+    <MapView />
+  )
+}
 function App() {
 
   return (
     <>
-      <QueryClientProvider client={queryClient}>
-        <TableWrapper/>
-      </QueryClientProvider>
+      {/* <QueryClientProvider client={queryClient}> */}
+      <MapView />
+        {/*<TableWrapper/>*/}
+      {/* </QueryClientProvider> */}
     </>
   )
 }
