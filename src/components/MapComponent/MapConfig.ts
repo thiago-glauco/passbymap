@@ -1,3 +1,6 @@
+/**
+ * To lead in the future: use maplibre in dev and mapbox in prod.
+ */
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 
 export const MAP_STYLE = MAPBOX_TOKEN

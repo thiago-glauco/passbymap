@@ -14,6 +14,7 @@
     "test:e2e:playwright": "playwright test"
   },
   "dependencies": {
+    "@deck.gl/core": "^9.1.8",
     "@deck.gl/layers": "^9.1.8",
     "@deck.gl/react": "^9.1.8",
     "@emotion/react": "^11.14.0",
@@ -32,7 +33,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-map-gl": "^7.0.17",
-    "react-virtuoso": "^4.12.6"
+    "react-virtuoso": "^4.12.6",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@cypress/vite-dev-server": "^6.0.3",

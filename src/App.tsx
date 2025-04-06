@@ -3,6 +3,7 @@ import './App.css'
 import { useGeospatialData } from './hooks/useGeolocationData';
 import VirtualizedTenantsTable from './components/TenantsTable/VirtualizedTenantsTable'
 import MapView from './components/MapComponent/MapView'
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const queryClient = new QueryClient();
 
@@ -19,18 +20,21 @@ const TableWrapper = ( ) => {
 
 const MapWrapper = ( ) => {
   const { data, isLoading, error } = useGeospatialData();
-  return(
-    <MapView />
-  )
+  if( isLoading ) return <>Loading Map</>
+  if ( data ) 
+    return(
+        
+        <MapView data={data} />
+      )
 }
 function App() {
 
   return (
     <>
-      {/* <QueryClientProvider client={queryClient}> */}
-      <MapView />
+      <QueryClientProvider client={queryClient}>
+      <MapWrapper />
         {/*<TableWrapper/>*/}
-      {/* </QueryClientProvider> */}
+      </QueryClientProvider>
     </>
   )
 }
