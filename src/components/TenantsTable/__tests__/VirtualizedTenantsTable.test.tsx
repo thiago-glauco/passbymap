@@ -1,7 +1,7 @@
 import { render, screen, waitFor, act } from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
 import VirtualizedTenantsTable from "../VirtualizedTenantsTable";
-import { GeolocationRecord } from "../../../types/GeolocationRecord";
+import { GeolocationRecord } from "../../../types";
 
 const generateData = (count: number): GeolocationRecord[] => {
   return Array.from({ length: count }, (_, i) => ({

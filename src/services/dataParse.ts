@@ -2,7 +2,7 @@
  * My intention here is to parse the records and sanityze then, so it will run like a real backend.
  */
 import * as DOMPurify from 'dompurify';
-import { GeolocationRecord } from "../types/GeolocationRecord";
+import { GeolocationRecord } from "../types";
 
 /**
  * returns a sanitezed JSON like record.

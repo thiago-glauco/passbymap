@@ -1,7 +1,7 @@
 // src/hooks/useGeospatialData.ts
 import { useQuery } from "@tanstack/react-query";
 import { fetchGeolocationData } from "../services/FetchGeolocationData";
-import { GeolocationRecord } from "../types/GeolocationRecord";
+import { GeolocationRecord } from "../types";
 
 export const useGeospatialData = () => {
   return useQuery<GeolocationRecord[], Error>({

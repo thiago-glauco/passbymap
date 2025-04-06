@@ -1,6 +1,6 @@
 
 import { dataParse } from "./dataParse";
-import { GeolocationRecord } from "../types/GeolocationRecord";
+import { GeolocationRecord } from "../types";
 import { Errors } from "./ServiceMessages";
 
 
