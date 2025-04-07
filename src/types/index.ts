@@ -34,4 +34,5 @@ export interface PlacesStore {
     key: keyof GeolocationRecord;
     label: string;
   }
+
   

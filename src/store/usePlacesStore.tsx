@@ -7,7 +7,6 @@ export const usePlacesStore = create<PlacesStore>((set, get) => ({
   filters: {},
   sortField: 'name', // default safe field
   sortDirection: 'asc', // 'asc' | 'desc'
-
   setPlaces: (places: GeolocationRecord[]) => {
     set(() => ({ places }));
     get().applyFiltersAndSort();
